@@ -8,69 +8,82 @@
 
 ## Présentation générale
 
-Ce dépôt regroupe une série de trois projets réalisés dans le cadre du cours **BIF-4000 / 7000 – Modélisation bio-moléculaire** à l’Université Laval.  
-L’objectif global est d’appliquer les approches de **modélisation moléculaire**, de **dynamique moléculaire (MD)** et d’**arrimage moléculaire (docking)** à l’étude d’une protéine enzymatique et de ses interactions avec divers ligands.
+Ce dépôt regroupe trois projets réalisés dans le cadre du cours **BIF-4000 / 7000 – Modélisation bio-moléculaire** à l’Université Laval.  
+L’objectif global était d’explorer les principales approches de **modélisation et simulation moléculaire** appliquées à une protéine enzymatique modèle et à ses ligands.  
 
-Chaque étape illustre une composante clé de la bio-informatique structurale, depuis la simulation d’une protéine en solution jusqu’à l’évaluation de la reconnaissance ligand-récepteur.
+À travers ces travaux, j’ai pu étudier successivement :
+1. La **stabilité intrinsèque d’une protéine en solution**.  
+2. L’**influence de ligands sur la dynamique du site actif**.  
+3. Le **mécanisme d’interaction ligand-protéine via l’arrimage moléculaire (docking)**.
+
+Ces trois volets forment une démarche complète d’analyse structurale, de la dynamique interne jusqu’à la reconnaissance moléculaire.
 
 ---
 
-## Organisation du dépôt
+## Structure du dépôt
 
-| Dossier | Titre du projet | Description |
-|:--------|:----------------|:-------------|
-| [`1_Dynamique_Proteine`](./1_Dynamique_Proteine) | **Dynamique moléculaire de la protéine** | Simulation de 10 ns d’une enzyme hydrolase en solution aqueuse pour observer sa stabilité et ses fluctuations structurales. |
-| [`2_Dynamique_complexe`](./2_Dynamique_complexe) | **Dynamique moléculaire de complexes protéine-ligand** | Étude comparative de la stabilité de plusieurs complexes en environnement explicite et implicite. |
-| [`3_Arrimage_Moleculaire`](./3_Arrimage_Moleculaire) | **Arrimage moléculaire (Docking)** | Analyse des modes de liaison de différents ligands et évaluation des énergies d’interaction au sein du site actif. |
+### 🧩 1. Dynamique moléculaire de la protéine  
+Simulation d’une enzyme hydrolase seule en solution aqueuse afin d’observer sa stabilité, ses fluctuations (RMSD, RMSF) et la conservation de sa structure secondaire.  
+Ce projet met en pratique la préparation d’un système biomoléculaire complet et l’analyse des trajectoires de dynamique.
+
+### 🔬 2. Dynamique moléculaire de complexes protéine-ligand  
+Extension du premier projet : des ligands ont été introduits afin d’analyser leur effet sur la flexibilité et la stabilité de la protéine.  
+Des simulations ont été menées en environnement explicite et implicite pour comparer la robustesse structurale des complexes.
+
+### ⚗️ 3. Arrimage moléculaire (Docking)  
+Étude des interactions entre plusieurs ligands et la protéine à l’aide d’approches d’arrimage moléculaire.  
+Les résultats permettent d’identifier les meilleures affinités de liaison et de comprendre les interactions structurales responsables de la reconnaissance moléculaire.
 
 ---
 
 ## Objectifs d’apprentissage
 
-- Appliquer les principes de **la modélisation bio-moléculaire** pour l’étude de systèmes biologiques complexes.  
-- Comprendre les étapes de **préparation**, **simulation**, et **analyse** de trajectoires moléculaires.  
-- Évaluer la **stabilité**, la **flexibilité** et les **interactions moléculaires** par des méthodes de dynamique et de docking.  
-- Maîtriser l’utilisation d’outils spécialisés : **CHARMM-GUI**, **NAMD**, **VMD**, **PyMOL**, **LeDock**.
+- Comprendre les fondements de la **modélisation bio-moléculaire** et de la **dynamique moléculaire**.  
+- Appliquer des méthodes numériques pour la **simulation**, la **visualisation** et l’**analyse structurale**.  
+- Explorer les mécanismes d’interaction entre protéines et ligands.  
+- Développer une autonomie dans l’utilisation de logiciels de simulation et d’analyse moléculaire.
 
 ---
 
 ## Méthodologie générale
 
-1. Préparation des structures protéiques et ligands.  
-2. Paramétrisation et solvatisation des systèmes avec **CHARMM-GUI**.  
-3. Simulations MD avec **NAMD** (10 ns, 300 K).  
-4. Analyse structurale à l’aide de **VMD** et **PyMOL**.  
-5. Études d’arrimage avec **LeDock** pour l’évaluation de l’affinité ligand-récepteur.  
+1. Préparation des systèmes (protéine et ligands) avec **CHARMM-GUI**.  
+2. Simulations de **dynamique moléculaire** avec **NAMD** à 300 K sur 10 ns.  
+3. Analyse des trajectoires à l’aide de **VMD** et **PyMOL** (RMSD, RMSF, structures secondaires).  
+4. Études d’**arrimage moléculaire** avec **LeDock** et visualisation des poses.  
+5. Interprétation des résultats en lien avec les propriétés structurales et énergétiques.
 
 ---
 
-## Technologies et logiciels
+## Outils et logiciels utilisés
 
-- **CHARMM-GUI** – génération de topologies et systèmes solvates  
-- **NAMD** – calculs de dynamique moléculaire  
-- **VMD** – analyses RMSD, RMSF, visualisation des trajectoires  
-- **PyMOL** – préparation et exploration des structures 3D  
-- **LeDock** – calcul des poses d’arrimage  
-- **Open Babel** – conversion des formats moléculaires  
+- **CHARMM-GUI** – Préparation des systèmes biomoléculaires  
+- **NAMD** – Exécution des simulations de dynamique moléculaire  
+- **VMD** – Analyse des trajectoires et visualisation 3D  
+- **PyMOL** – Manipulation et rendu des structures  
+- **LeDock** – Calcul des poses d’arrimage  
+- **Open Babel** – Conversion de formats moléculaires  
+- **Python (matplotlib)** – Visualisation et analyse de données  
 
 ---
 
-## Aperçu du parcours
+## Parcours global
 
-Ces travaux forment une progression logique :
-1. **Observation de la protéine seule** — comprendre sa flexibilité naturelle.  
-2. **Simulation des complexes protéine-ligand** — évaluer l’effet des ligands sur la dynamique.  
-3. **Docking moléculaire** — identifier les modes de fixation et affinités potentielles.
+Ces trois projets constituent une progression cohérente :  
+- **Étape 1 :** Observation et compréhension du comportement naturel d’une protéine.  
+- **Étape 2 :** Analyse des effets de ligands sur sa dynamique et stabilité.  
+- **Étape 3 :** Évaluation des affinités et modes de liaison par docking.  
+
+Ensemble, ils forment un aperçu complet des approches modernes utilisées en **bioinformatique structurale** et en **chimie computationnelle**.
 
 ---
 
 ## Auteur
 
 🧬 **Nesrine Imloul**  
-Étudiante en Bio-informatique – Université Laval  
-Projet académique réalisé dans le cadre du cours **BIF-4000 / 7000 – Modélisation Bio-moléculaire**  
-Hiver 2025
+Étudiante en Bio-informatique — Université Laval  
+Projet académique réalisé dans le cadre du cours **BIF-4000 / 7000 – Modélisation Bio-moléculaire (Hiver 2025)**  
 
 ---
 
-*© 2025 – Dépôt académique personnel. Utilisation éducative et scientifique uniquement.*
+*© 2025 – Projet académique. Utilisation éducative et scientifique uniquement.*
