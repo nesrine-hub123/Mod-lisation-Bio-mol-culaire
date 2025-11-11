@@ -1,4 +1,4 @@
-# Devoir 4 — Arrimage moléculaire (Docking)
+# Arrimage moléculaire (Docking)
 
 **Cours :** BIF-4000 / 7000 — Modélisation bio-moléculaire  
 **Université Laval — Hiver 2025**  
