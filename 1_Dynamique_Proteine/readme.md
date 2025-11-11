@@ -1,4 +1,4 @@
-# Devoir 2 — Dynamique moléculaire de la protéine
+# Dynamique moléculaire de la protéine
 
 **Cours :** BIF-4000 / 7000 — Modélisation bio-moléculaire  
 **Université Laval — Hiver 2025**  
@@ -22,4 +22,44 @@ Effectuer une **simulation de dynamique moléculaire** complète d’une protéi
 
 ### Méthodologie
 
-- Préparation du système à l’aide de **CHARMM**
+- Préparation du système à l’aide de **CHARMM-GUI**  
+- Solvatation du système avec eau et ions Na⁺/Cl⁻  
+- Simulation de 10 ns réalisée avec **NAMD**  
+- Analyse des trajectoires avec **VMD** :
+  - évolution du volume et de la température  
+  - énergie totale du système  
+  - calcul des RMSD et RMSF  
+- Calcul des dièdres χ₁ pour trois acides aminés sélectionnés  
+- Comparaison entre les structures secondaires initiale et finale
+
+---
+
+### Résultats
+
+- Le RMSD se stabilise autour de 2,1 Å après environ 4 ns  
+- Les RMSF indiquent une plus grande flexibilité dans les boucles et extrémités  
+- La structure globale (hélices et feuillets) reste stable  
+- Quelques transitions locales sont observées entre hélices et boucles  
+
+---
+
+### Logiciels et outils
+
+- **CHARMM-GUI** : préparation du système  
+- **NAMD** : exécution de la simulation  
+- **VMD** : analyse RMSD/RMSF et dièdres  
+- **PyMOL** : visualisation et comparaison structurale  
+
+---
+
+### Fichiers fournis
+
+- `devoir2_bif4000.pdf` – rapport complet  
+- `simulation.dat` – valeurs RMSD/RMSF  
+- `finale.pdb` – structure finale  
+- `comparaison_structures_secondaires.txt` – analyse secondaire  
+- `section10.out.gz` – sortie NAMD  
+
+---
+
+Projet académique – Université Laval (2025)
